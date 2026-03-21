@@ -1,0 +1,65 @@
+ARDUINO NANO:
+Very compact → perfect for robots where space matters
+Fits easily on small chassis
+Cheaper than many other boards
+Good for student projects and prototypes
+Works with the Arduino IDE
+14 digital pins
+8 analog pins
+Can connect sensors + motor drivers (like TB6612FNG)
+
+Arduino Nano works:
+Reads inputs (sensors)
+Processes logic (your code)
+Controls outputs (motors, LEDs)
+
+Input → Process → Output cycle:
+Input:
+Sensors send signals
+(IR, ultrasonic, buttons)
+Processing:
+Arduino runs your program (written in C/C++)
+Makes decisions
+Output:
+Sends signals to:
+Motor driver (TB6612FNG)
+LEDs
+Buzzers
+
+ARDUINO PIN CONFIGURATION:
+1. Digital Pins (D0 – D13)
+Total: 14 digital pins
+Used for: ON/OFF signals
+Special ones:
+D0 (RX), D1 (TX) → Serial communication
+D2, D3 → External interrupts
+D3, D5, D6, D9, D10, D11 → PWM pins
+2. PWM Pins (Speed control)
+Used for motor speed control (important for TB6612FNG)
+PWM Pins:
+D3, D5, D6, D9, D10, D11
+3. Analog Pins (A0 – A7)
+Used to read analog signals (0–1023)
+Example uses:
+IR sensors
+Potentiometers
+A6, A7 → input only (no output)
+4. Power Pins
+5V → Power output to modules
+3.3V → Low-power devices
+GND → Ground
+VIN → External power input (7–12V)
+5. Communication Pins
+UART (Serial):
+D0 → RX
+D1 → TX
+I2C:
+A4 → SDA
+A5 → SCL
+SPI:
+D10 → SS
+D11 → MOSI
+D12 → MISO
+D13 → SCK
+6. Reset Pin
+Restarts Arduino when triggered
