@@ -1,0 +1,85 @@
+TB6612FNG:
+Takes low-power signals from a controller
+Drives high-power motors safely
+can control:
+2 DC motors OR
+1 stepper motor
+Why do we need it?
+A board like the Arduino Nano:
+Cannot supply enough current to run motors
+Can get damaged if connected directly
+So TB6612FNG acts as a middle layer (driver)
+
+How it works (Simple):
+Step-by-step process:
+1. Arduino sends signals
+Direction signals → AIN1, AIN2
+Speed signal → PWM (PWMA)
+2. TB6612FNG processes signals
+Uses internal H-Bridge circuit
+3. Motor runs
+Gets power from battery (VM pin)
+Rotates forward/backward
+
+Power:
+VM → Motor power (battery)
+VCC → Logic power (Arduino 5V)
+GND → Ground
+Control:
+AIN1, AIN2 → Direction (Motor A)
+BIN1, BIN2 → Direction (Motor B)
+PWMA, PWMB → Speed (PWM)
+STBY → Enable (must be HIGH)
+
+Power Flow:
+Battery → VM → Motor
+Arduino → Control signals → TB6612FNG
+Advantages:
+Efficient (less heat)
+Small size
+Better than L298N
+Good for battery robots
+
+TB6612FNG PIN CONFIGURATION:
+
+This motor driver can control 2 motors (Motor A & Motor B).
+1. Power Pins
+VM → Motor power supply (battery 5V–12V)
+VCC → Logic power (from Arduino, usually 5V)
+GND → Ground (must be common with Arduino)
+2. Motor Output Pins
+Motor A:
+A01, A02 → Connect to Motor A
+Motor B:
+B01, B02 → Connect to Motor B
+3. Control Pins
+Motor A Control
+AIN1, AIN2 → Direction control
+PWMA → Speed control (PWM)
+Motor B Control
+BIN1, BIN2 → Direction control
+PWMB → Speed control (PWM)
+4. Standby Pin
+STBY (Standby)
+LOW → Driver OFF
+HIGH → Driver ON
+How Pins Work Together
+To move Motor A forward:
+AIN1 = HIGH
+AIN2 = LOW
+PWMA = PWM signal
+To reverse:
+AIN1 = LOW
+AIN2 = HIGH
+
+Power → VM, VCC, GND  
+Control → AIN1, AIN2, BIN1, BIN2  
+Speed → PWMA, PWMB  
+Motor → A01, A02, B01, B02  
+Enable → STBY  
+Must be HIGH for motors to work
+
+Always connect common GND
+Don’t forget STBY = HIGH
+Use PWM pins for speed control
+Use separate battery for motors (VM)
