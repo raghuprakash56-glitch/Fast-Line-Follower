@@ -1,0 +1,44 @@
+An encoder motor is basically a normal DC motor + a sensor (encoder) that tells you how fast and how much the motor has rotated.
+
+What is an Encoder Motor?
+
+It combines:
+
+A DC motor → makes the wheel spin
+An encoder → measures rotation
+
+So instead of just “moving”, you now know:
+
+✔ Speed
+✔ Direction
+✔ Distance traveled
+⚙️ Main Idea (Simple)
+Motor spins → Encoder senses rotation → Sends signals to Arduino
+What is the Encoder?
+
+Inside the motor, there is:
+
+A rotating disk (with slots or magnets)
+A sensor (optical or magnetic)
+Every time the motor rotates, the encoder generates pulses (signals).
+
+Types of Encoder Signals
+
+Most encoder motors give 2 signals:
+
+Channel A & Channel B
+
+These are:
+
+Square wave signals
+Slightly shifted from each other
+This helps detect:
+
+Speed
+Direction
+How it works (step-by-step)
+Motor rotates
+Encoder disk spins
+Sensor detects movement
+Sends pulses to Arduino
+Arduino counts pulses
