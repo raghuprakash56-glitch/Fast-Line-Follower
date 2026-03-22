@@ -1,0 +1,76 @@
+A DC motor with encoder is widely used in robotics and automation because it not only rotates but also gives feedback about speed, direction, and position. Let’s break down the pin configuration clearly and fully 👇
+
+1. What is a DC Motor Encoder?
+
+A DC motor encoder is a normal DC motor attached with an encoder sensor (usually optical or magnetic).
+It provides pulses when the motor shaft rotates.
+These pulses help measure:
+
+Speed (RPM)
+Direction
+Position (angle)
+2. Typical Pin Configuration (Most Common Types)
+
+A DC motor encoder usually has 4 to 6 pins, depending on the model.
+A. Motor Power Pins (2 pins)
+
+These are for driving the motor itself:
+
+M+ (Motor Positive)
+M− (Motor Negative)
+Function:
+
+Apply voltage → motor rotates
+Reverse polarity → motor reverses direction
+B. Encoder Power Pins (2 pins)
+VCC (Power Supply) → usually 3.3V or 5V
+GND (Ground)
+Function:
+
+Supplies power to the encoder circuit
+C. Encoder Signal Pins (2 pins – Quadrature Output)
+Channel A (OUT A)
+Channel B (OUT B)
+Function:
+
+These generate digital pulses
+Used to detect:
+Speed
+Direction
+3. How Channel A & B Work (Very Important)
+
+The encoder uses a concept called:
+Quadrature Encoding
+
+Channel A and B produce square waves
+They are 90° out of phase
+Meaning:
+If A leads B → clockwise rotation
+If B leads A → anticlockwise rotation
+Example Signal Behavior
+Rotation	Signal Pattern
+Clockwise	A → B
+Anti-clockwise	B → A
+4. Types of Encoders in DC Motors
+Incremental Encoder (Most common)
+Gives pulses only
+Needs counting to determine position
+Absolute Encoder
+Gives exact position directly
+More expensive
+5. Pulses Per Revolution (PPR)
+Encoder gives pulses for each rotation
+Example:
+100 PPR → 100 pulses per full rotation
+Example Connection (Arduino)
+M+ / M− → Motor driver (like L298N)
+VCC → 5V
+GND → GND
+A → Digital pin 2 (interrupt)
+B → Digital pin 3 (interrupt)
+More PPR = higher accuracy
+Final Simple View
+A DC motor encoder has two parts:
+
+Motor pins (2) → to rotate motor
+Encoder pins (4) → to sense motion
