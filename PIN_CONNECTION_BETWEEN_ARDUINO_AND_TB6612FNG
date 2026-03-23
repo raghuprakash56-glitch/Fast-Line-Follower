@@ -1,0 +1,62 @@
+TB6612FNG Pin Overview
+
+The module has two sides:
+A. Power Pins
+Pin	Name	Function
+VM->	Motor Power->	5V–12V (motor supply)
+VCC->	Logic Power->	5V (from Arduino)
+GND->	Ground->	Common ground
+STBY->	Standby->Enable pin
+B. Motor A Control Pins
+Pin->	Function
+AIN1->	Direction control
+AIN2->	Direction control
+PWMA-> Speed control (PWM)
+C. Motor B Control Pins
+Pin->	Function
+BIN1->	Direction control
+BIN2-> Direction control
+PWMB->	Speed control (PWM)
+D. Output Pins (To Motors)
+Pin->	Connects to
+A01, A02->	Motor A
+B01, B02-> Motor B
+Connection with Arduino (Example)
+✅ Motor A Connection
+TB6612FNG	Arduino
+VCC->	5V
+GND	->GND
+VM	->External battery (e.g., 7–12V)
+STBY->	5V (or digital pin)
+AIN1->	D7
+AIN2	->D8
+PWMA	->D5 (PWM pin)
+
+✅ Motor B Connection (Optional)
+TB6612FNG->	Arduino
+BIN1->	D9
+BIN2->	D10
+PWMB->	D6 (PWM pin)
+Motors
+Motor A → A01 & A02
+Motor B → B01 & B02
+How Pins Work
+Direction Control (AIN1, AIN2)
+AIN1->	AIN2	->Motor Direction
+HIGH	->LOW	->Forward
+LOW	->HIGH	->Reverse
+LOW	->LOW	->Stop
+HIGH->	HIGH	->Brake
+Speed Control (PWMA / PWMB)
+Use PWM signal (0–255)
+Controls motor speed
+STBY (Standby Pin)
+HIGH → Motor ON
+LOW → Motor OFF
+Must be HIGH to run motors
+Important Notes
+
+✔ Always use external power for motors (VM)
+✔ Do NOT power motors from Arduino 5V
+✔ Connect common GND between Arduino and driver
+✔ Use PWM pins for speed control
