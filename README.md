@@ -9,7 +9,7 @@ The repository serves as both a personal knowledge base and a reference for begi
 ## 📁 Learning Source
 
 Instructor - Dr.Daniel Raj A
-Learning Platform - (Add platform if applicable)
+Learning Platform - Etalvis.com
 
 This learning experience helped build a strong understanding of both theoretical and practical aspects of embedded systems and robotics.
 
