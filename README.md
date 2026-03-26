@@ -2,7 +2,7 @@
 
 ## 📁 About This Repository
 
-This repository is dedicated to learning, building, and improving a **Line Follower Robot**. It contains programs, circuit concepts, and implementation details developed during my learning process, focusing on clarity, accuracy, and practical understanding.
+This repository is dedicated to learning, building, and improving a ***Line Follower Robot***. It contains programs, circuit concepts, and implementation details developed during my learning process, focusing on clarity, accuracy, and practical understanding.
 
 The repository serves as both a personal knowledge base and a reference for beginners who want to understand robotics concepts through hands-on examples.
 
