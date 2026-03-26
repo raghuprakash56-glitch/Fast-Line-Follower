@@ -33,7 +33,7 @@ Each concept is implemented with simple examples to ensure easy understanding.
 ## 📁 Repository Structure
 
 * The repository is organized into multiple folders
-* Each folder contains code, circuit diagrams, or concept-based files
+* Each folder contains code,circuit diagrams,or concept-based files
 * Programs are written with proper formatting and comments
 * Focus is given to readable and maintainable code
 
