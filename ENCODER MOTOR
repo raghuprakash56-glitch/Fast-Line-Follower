@@ -5,7 +5,6 @@ What is an Encoder Motor?
 It combines:
 
 A DC motor → makes the wheel spin
-
 An encoder → measures rotation
 
 So instead of just “moving”, you now know:
