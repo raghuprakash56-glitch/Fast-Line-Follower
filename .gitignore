@@ -1,0 +1,49 @@
+# Arduino IDE
+*.ino.bak
+*.ino.backup
+*.hex
+*.elf
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build artifacts
+build/
+dist/
+*.o
+*.a
+*.so
+
+# Dependencies
+node_modules/
+venv/
+.env
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Backups
+*.bak
+backup/
+
+# IDE configurations
+.settings/
+.classpath
+.project
