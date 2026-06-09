@@ -3,7 +3,7 @@
 ## Prerequisites
 
 ### Hardware
-- Arduino Uno microcontroller board
+- Arduino nano microcontroller board
 - 2x IR sensors (TCRT5000 or similar)
 - 2x DC motors (3-6V)
 - Motor driver module (L293D or L298N)
