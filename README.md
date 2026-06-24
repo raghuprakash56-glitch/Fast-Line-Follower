@@ -6,14 +6,12 @@ This repository is dedicated to learning, building, and improving a ***Line Foll
 
 The repository serves as both a personal knowledge base and a reference for beginners who want to understand robotics concepts through hands-on examples.
 
-
 ## 📁 Learning Source
 
 Instructor - Dr.Daniel Raj A
   Learning Platform - Etalvis.com
 
 This learning experience helped build a strong understanding of both theoretical and practical aspects of embedded systems and robotics.
-
 
 ## 📁 Concepts Practiced
 
@@ -31,7 +29,6 @@ The contents of this repository demonstrate implementation of:
 * Problem-solving in real-time systems
 
 Each concept is implemented with simple examples to ensure easy understanding.
-
 
 ## 📁 Repository Structure
 
